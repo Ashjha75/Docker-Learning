@@ -1,0 +1,39 @@
+Docker Learninng
+
+build docker file 
+#docker build -t node-app-image .
+.. here -t nde-app-image is used to tag the image with the name of node-app-image  and . is used to specify the location of docker file 
+# docker image rm node-app-image
+.. here node-app-image is the name of the image to be removed
+# docker image ls
+.. it is used to list all image
+# docker ps -a
+.. it is used to list all container
+#docker run -p 8000:8000 -d --name node-app node-app-image
+.. here -p is used to map the port 8000 of host to port 8000 of container
+.. here -d is used to run the container in detached mode(background not occupy the terminal)
+.. here --name is used to give the name to the container
+.. here node-app is the name of the container
+.. here node-app-image is the name of the image
+# docker stop node-app
+#docker exec -it node-app bash
+.. here -it is used to run the container in interactive mode
+..here exec is used to execute the command and bash is the command to be executed
+
+#docker run -v ${pwd}:/app:ro -v /app/node_modules --env-file ./.env -p 8000:8000 -d --name node-app node-app-image
+.. here -v is used to mount the volume
+.. here ${pwd} is used to mount the current directory
+.. here :ro is used to make the volume read only
+.. here /app/node_modules is used to mount the volume of node_modules
+.. here --env-file is used to specify the location of .env file
+.. here ./.env is used to specify the location of .env file
+
+#docker volume prune
+.. it is used to remove all unused volume
+#docker rm node-app -fv
+.. here -f is used to force remove the container
+.. here -v is used to remove the volume associated with the container
+#docker-compose up -d
+.. here -d is used to run the container in detached mode
+#docker-compose down -v
+.. here -v is used to remove the volume associated with the container
