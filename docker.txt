@@ -37,3 +37,14 @@ build docker file
 .. here -d is used to run the container in detached mode
 #docker-compose down -v
 .. here -v is used to remove the volume associated with the container
+#docker-compose up -d --build
+.. here --build is used to build the image
+# docker exec -it nodejs-mongo-1 mongo -u Ashish -p Staging123$
+.. here nodejs-mongo-1 is the name of the container
+.. here mongo is the command to be executed
+.. here -u is used to specify the username
+.. here -p is used to specify the password
+#docker volume prune
+.. it is used to remove all unused volume
+
+
