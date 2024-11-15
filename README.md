@@ -1,6 +1,6 @@
 # Docker Learning
 
-![Docker Logo](https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png)
+![Docker Logo](./docker.jpg)
 
 Welcome to my Docker learning journey! This repository documents my progress as I explore and master Docker, a powerful platform for developing, shipping, and running applications.
 
